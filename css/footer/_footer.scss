@@ -1,0 +1,151 @@
+.ly-contents { //컨텐츠 footer 시작부
+    footer {
+        position: relative;
+       
+        .familySiteBox {
+            display: none;
+            width:100%;
+            max-width:1200px;
+            vertical-align: middle;
+            left:0;
+            right:0;
+            top:-61px;
+            margin: auto;
+            position: absolute;
+            background-color:#f4f4f4;
+            .close-wrap {
+                position: relative;
+                vertical-align: middle;
+                display: inline-block;
+                float:right;
+                right:50px;
+                top:22px;
+                cursor: pointer;
+            }
+            ul {
+                display: inline-block;
+                vertical-align: middle;
+                line-height:58px;
+                height:60px;
+                li {
+                    font-size:16px;
+                    font-weight: 400;
+                    letter-spacing: -0.025em;
+                    margin-left:50px;
+                    display: inline-block;
+                    &:first-child {
+                        margin-right:30px;
+                    }
+                    a {
+                        color:$Grey01;
+                        &:hover {
+                            color:$Pink01;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        border-top:1px solid $Black01;
+        height:180px;
+        width:100%;
+        .footerWrap {
+            @include contentsWrap;
+            .footerHead {
+                display: table;
+                vertical-align: middle;
+                width:100%;
+                .footerLt {
+                    color:$Grey01;
+                    display: table-cell;
+                    vertical-align: middle;
+                    height:60px;
+                    .inforIc {
+                        position: relative;
+                        top:-1px;
+                        display: inline-block;
+                        width:20px;
+                        height:20px;
+                        vertical-align: middle;
+                        margin-right:10px;
+                        background:url(../../img/inforIc.png) no-repeat center;
+                    }
+                }
+                .footerRt {
+                    color:$Grey01;
+                    display: table-cell;
+                    vertical-align: middle;
+                    height:60px;
+                    .familyWrap {
+                        float:right;
+                        a {
+                            cursor: pointer;
+                            span {
+                                font-weight: bold;
+                                font-size:16px;
+                                color:$Pink01;
+                                display: inline-block;
+                                margin-left:6px;
+                            }
+                        }                       
+                    }
+                }
+            }
+        }
+        
+        .footerContentsWrap {
+            border-top:1px solid $border02;
+            height:119px;
+            .footerContents {
+                @include contentsWrap;
+                .footerCtl {
+                    float:left;
+                    font-size:16px;
+                    letter-spacing: -0.025em;
+                    font-weight: 300;
+                    color:$Grey04;
+                    ul.first {
+                        padding-top:30px;
+                    }
+                    ul.second {
+                        padding-top:15px;
+                    }
+                    ul.first, ul.second {
+                        li {
+                            display: inline-block;
+                            &:after {
+                                content:"";
+                                display: inline-block;
+                                vertical-align: top;
+                                margin:0px 6px 0px 10px;
+                                width:2px;
+                                height:16px;
+                                background-color:$Grey05;
+                            }
+                            &:last-child {
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footerCtr {
+                    ul {
+                        float: right;
+                        margin-top:30px;
+                        li {
+                            &:last-child {
+                                margin-right:0px;
+                            }
+                            display: inline-block;
+                            margin-right:36px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

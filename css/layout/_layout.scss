@@ -1,0 +1,378 @@
+//전체 레이아웃관련 css
+
+.app {
+    font-size:18px;
+}
+.ly-wrapper {
+    margin:0;
+    padding:0;
+    .ly-contents { //컨텐츠 시작부
+        width:100%;
+        height:100%;
+    }
+}
+
+//fullpages
+.section {
+    .ms_slider_wrap {
+        height:100%;
+        .ms_slider {
+            width:100%;
+            height:inherit;
+            li{
+                height:inherit;
+            }
+            .slide__bg01 {
+                background:url(../../img/contents/slider02.jpg) no-repeat center center;
+                background-size:cover;
+                height:100%;
+            }
+            .slide__bg02 {
+                background:url(../../img/contents/slider01.jpg) no-repeat center center;
+                background-size:cover;
+                height:100%;
+            }
+        }
+    }
+    
+    
+    .main-text-wrap {
+        display: table;
+        position: absolute;
+        height:100%;
+        width:100%;
+        left: 0;
+        top:0;
+        z-index: 50;
+        right:0;
+        bottom:0;
+        margin:auto;
+        .main-text {
+            text-align: center;
+            color:$white;
+            display: table-cell;
+            position: relative;
+            vertical-align: middle;
+            h1 { //메인 타이틀
+                font-size:60px;
+                font-weight: bold;
+                letter-spacing: -0.06em;
+                @include textShadow;
+            }
+            h2 { //메인 서브 타이틀
+                margin-top:38px;
+                font-size:24px;
+                font-weight: 400;
+                letter-spacing: -0.06em;
+                @include textShadow;
+            }
+        }
+    }
+    
+    .table {
+        font-size:0px;
+        width:100%;
+        height:100%;
+        display: block;
+        &.slide {
+            &__Back0 {
+                width:100%;
+                height:inherit;
+                background: #fff url(../../img/contents/tongbg01.jpg) no-repeat center center;
+                background-size: cover;
+                position: relative;
+                z-index:1;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &__Back1 {
+                width:100%;
+                height:inherit;
+                background: #fff url(../../img/contents/tongbg02.jpg) no-repeat left center;
+                background-size: cover;
+                position: relative;
+                z-index:2;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        .table-cell {
+            position: relative;
+            display: inline-block;
+            width:50%;
+            height:100%;
+            vertical-align: middle;
+            font-size:16px;
+            text-align: center;
+            color:$white;
+            &.dimmer {
+                background-color:rgba(0,0,0,0.25);
+            }
+            .slide {
+                &__Back0 {
+                    width:100%;
+                    height:inherit;
+                    background: url(../../img/contents/tongbg01.jpg) no-repeat center center;
+                    background-size: cover;
+                    position: relative;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                &__Back1 {
+                    width:100%;
+                    height:inherit;
+                    background: url(../../img/contents/tongbg02.jpg) no-repeat left center;
+                    background-size: cover;
+                    position: relative;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.is-active {
+    width:0%!important;
+    transition: all 0.8s ease-in-out;
+    opacity: 0;
+}
+
+.scroll_icon {
+    position: fixed;
+    bottom:50px;
+    z-index: 101;
+    left: 0;
+    right:0;
+    text-align: center;
+    color:#fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size:14px;
+    span {
+        animation:scrolldown 0.5s ease-in infinite alternate;
+        -webkit-animation: scrolldown 0.5s ease-in infinite alternate;
+        display: block;
+        margin:0 auto 10px;
+        z-index: 101;
+        width:23px;
+        height:30px;
+        background:url(../../img/scroll_icon.png) no-repeat center center;
+    }
+}
+
+//neo roll
+.neo-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    right:0;
+    .neo-position {
+        position: relative;
+        span {
+            &.neoIc01 {
+                display: block;
+                margin:0 auto;
+                width:102px;
+                height:102px;
+                background:url(../../img/contents/neo-ic01.png) no-repeat center center;
+            }
+            &.neoIc02 {
+                display: block;
+                margin:0 auto;
+                width:102px;
+                height:102px;
+                background:url(../../img/contents/neo-ic02.png) no-repeat center center;
+            }
+        }
+        .neo-txt {
+            @include textShadow;
+        }
+        .neo-btn {
+            opacity: 0;
+            transition: all 0.5s ease;
+            display: inline-block;
+            &.neo-zip {
+                margin-top:50px;
+                opacity: 1;
+            }
+            .NeoBtn {
+                height: 100%;
+                display: block;
+                background-color:rgba(255,255,255,0.2);
+                border-radius: 25px;
+                &:hover {
+                    transition: all 0.8s ease;
+                    background-color:#fff;
+                    a {
+                        color:$Pink01;
+                    }
+                }
+                a {
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    padding: 15px 50px;
+                    &.active-btn {
+                        color:$Pink01;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//section03
+.section03 {
+    width:100%;
+    height:100%;
+    .alightNeo {
+        width:100%;
+        height:calc(100% - 240px);
+        background:url(../../img/contents/neo-bg-bt.jpg) no-repeat top 100% center;
+        background-size:cover;
+        .table-wrap {
+            display: table;
+            width:100%;
+            height:100%;
+            .table-celled {
+                display: table-cell;
+                vertical-align: middle;
+                height:100%;
+                text-align: center;
+                .alightNeo-title {
+                    color:$Black01;
+                    span {
+                        color:$Pink01;
+                    }
+                }
+                .searchLink {
+                    margin-top:30px;
+                    span {
+                        color:$Black02;
+                        &:after {
+                            content:"";
+                            display: inline-block;
+                            width:41px;
+                            height:8px;
+                            background:url(../../img/search-arrow.png) no-repeat center;
+                            margin-left:10px;
+                        }
+                    }
+                }
+                .selList {
+                    font-size: 0;
+                    margin-top:60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    li {
+                        padding:39px;
+                        width:33.33%;
+                        max-width:360px;
+                        min-height:344px;
+                        background-color:$white;
+                        display: inline-block;
+                        border-radius: 30px;
+                        text-align:left;
+
+                        &:nth-child(2) {
+                            margin:0 60px;
+                        }
+                        .fit {
+                            color:$Pink01;
+                            margin-top:30px;
+                        }
+                        .sect {
+                            color:$Black02;
+                            margin-top:40px;
+                        }
+                        .lact {
+                            line-height:31px;
+                            color:$Grey06;
+                            margin-top:24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alightNoe-bt-box {
+    display: table;
+    width:100%;
+    height:240px;
+    background:url(../../img/contents/alightNeo-bt-bg.jpg) no-repeat center center;
+    background-size:cover;
+    .alightNofi {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height:100%;
+        p {
+            color:$white;
+            @include textShadow;
+            padding-bottom:60px;
+            span {
+                position: relative;
+                top: 20px;
+            }
+        }
+    }
+}
+
+@mixin scrollTop {
+    width:60px;
+    height:60px;
+    background-color:$Black01;
+    position: fixed;
+    right:80px;
+    bottom: 119px;
+    cursor: pointer;
+    @include boxShadow;
+    transition: all 0.5s ease;
+}
+// scroll-top btn
+.scroll-top-subpg {
+    @include scrollTop;
+    opacity: 0;
+
+    &.vs {
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    span {
+        position: relative;
+        margin:25px auto;
+        display: block;
+        width:22px;
+        height:11px;
+        background:url(../../img/top-arrow.png) no-repeat center;
+    }
+}
+.scroll-top-home {
+    @include scrollTop;
+    opacity: 1;
+
+    &.vs {
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    span {
+        position: relative;
+        margin:25px auto;
+        display: block;
+        width:22px;
+        height:11px;
+        background:url(../../img/top-arrow.png) no-repeat center;
+    }
+}
+
+.scroll-top { //default;
+    @include scrollTop;
+  
+    
+    
+}
+

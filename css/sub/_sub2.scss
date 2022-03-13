@@ -1,0 +1,270 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 필요성 및 관리 ****************************************************************//
+//***************************************************************************************************************************************************************//
+$sub2dangerIc01: url(/img/sub/sub2/sub2dangerIc01.png) no-repeat center;
+$sub2dangerIc02: url(/img/sub/sub2/sub2dangerIc02.png) no-repeat center;
+$sub2dangerIc03: url(/img/sub/sub2/sub2dangerIc03.png) no-repeat center;
+$sub2dangerIc04: url(/img/sub/sub2/sub2dangerIc04.png) no-repeat center;
+$sub2dangerIc05: url(/img/sub/sub2/sub2dangerIc05.png) no-repeat center;
+$sub2dangerIc06: url(/img/sub/sub2/sub2dangerIc06.png) no-repeat center;
+$sub2imArrow: url(/img/sub/sub2/sub2imArrow.png) no-repeat center;
+$sub2imprant01: url(/img/sub/sub2/sub2imprant01.jpg) no-repeat center;
+$sub2imprant02: url(/img/sub/sub2/sub2imprant02.jpg) no-repeat center;
+$sub2imprant03: url(/img/sub/sub2/sub2imprant03.jpg) no-repeat center;
+$sub2imprant04: url(/img/sub/sub2/sub2imprant04.jpg) no-repeat center;
+$sub2imprantCardBg: url(/img/sub/sub2/sub2imprantCardBg.jpg) no-repeat center;
+$sub2List01: url(/img/sub/sub2/sub2List01.png) no-repeat center;
+$sub2List02: url(/img/sub/sub2/sub2List02.png) no-repeat center;
+$sub2List03: url(/img/sub/sub2/sub2List03.png) no-repeat center;
+$_sub2Mbg: url(/img/sub/sub2/sub2Mbg.jpg) no-repeat center;
+
+.sub2ListWrap {
+    margin:40px 0 120px 0px;
+    ul {
+        margin-left:-30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            width:33.33%;
+            max-width:380px;
+
+            margin-left:30px;
+            .sub2ListImgBox {
+                min-height:380px;
+                &.__sub2List01 {
+                    background:$sub2List01;
+                }
+                &.__sub2List02 {
+                    background:$sub2List02;
+                }
+                &.__sub2List03 {
+                    background:$sub2List03;
+                }
+            }
+        }
+    }
+}
+
+.imprantAdvatage {
+    margin-bottom:30px;
+    .advantage_wrap {
+        @include contentsWrap;
+        ul {
+            font-size: 0;
+            margin-top:50px;
+            li {
+                display: inline-block;
+                width:50%;
+                max-width:570px;
+                &.mgr30 {
+                    margin-right:30px;
+                }
+                &.mgl30 {
+                    margin-left:30px;
+                }
+                .advantage_box {
+                    min-height:260px;
+                    &.__sub2imprant01 {
+                        background:$sub2imprant01;
+                    }
+                    &.__sub2imprant02 {
+                        background:$sub2imprant02;
+                    }
+                    &.__sub2imprant03 {
+                        background:$sub2imprant03;
+                    }
+                    &.__sub2imprant04 {
+                        background:$sub2imprant04;
+                    }
+                }
+                .adv-tail {
+                    display: table;
+                    width:100%;
+                    min-height:170px;
+                    margin-bottom:40px;
+                    .adv-table-cell {
+                        display: table-cell;
+                        height:100%;
+                        vertical-align: middle;
+                        .adv-Txt {
+
+                        }
+                        .adv-sub-txt {
+                            margin-top:12px;
+                            line-height:30px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+._sub2Mbg {
+    width:100%;
+    background:$_sub2Mbg;
+    background-size:cover;
+    ._sub2MbgHead {
+        padding-top:100px;
+        &::before {
+            content: "";
+            display: block;
+            width:50px;
+            height:2px;
+            background-color:$Pink03;
+            margin:0 auto 27px;
+        }
+    }
+    @mixin sub2danger {
+        content:"";
+        display: block;
+        position: absolute;
+        top:-30px;
+        margin:0 auto;
+        left:0;
+        right:0;
+        width:60px;
+        height:60px;
+    }
+    .sub2Danger {
+        @include contentsWrap;
+        margin-top:80px;
+        ul {
+            margin-left:-20px;
+            font-size:0px;
+            li {
+                position: relative;
+                &.sub2dangerIc01 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc01;
+                    }
+                }
+                &.sub2dangerIc02 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc02;
+                    }
+                }
+                &.sub2dangerIc03 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc03;
+                    }
+                }
+                &.sub2dangerIc04 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc04;
+                    }
+                }
+                &.sub2dangerIc05 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc05;
+                    }
+                }
+                &.sub2dangerIc06 {
+                    &:before {
+                        @include sub2danger;
+                        background:$sub2dangerIc06;
+                    }
+                }
+                width:33.33%;
+                border-radius: 30px;
+                border:1px solid #eda1cd;
+                max-width:385px;
+                margin-left:20px;
+                background-color:rgba(255,255,255,0.8);
+                margin-bottom:80px;
+                @include dpd;
+                .sub2danTable {
+                    display: table;
+                    width:100%;
+                    min-height:188px;
+                    .sub2danTable-cell {
+                        padding-top:10px;
+                        display: table-cell;
+                        vertical-align: middle;
+                        height:100%;
+                        .tb-m-txt {
+
+                        }
+                        .tb-sub-txt{
+                            line-height:30px;
+                            margin-top:16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.imprantManagementDay {
+    @include contentsWrap;
+    .dayListWrap {
+        margin-top:50px;
+        display: table;
+        width:100%;
+        border-radius: 30px;
+        min-height:120px;
+        padding:0 60px;
+        background-color:#f7f7f7;
+        .dayListContents {
+            display: table-cell;
+            vertical-align: middle;
+            height:100%;
+            ul {
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                li {
+                    display: table;
+                    white-space: nowrap;
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    &:after {
+                        display: table-cell;
+                        content:"";
+                        padding:0 45px;
+                        background:$sub2imArrow;
+                        width:7px;
+                        height:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.managementImgWrap {
+    margin:80px 0 180px 0px;
+    position: relative;
+    .managementBox {
+        width:700px;
+        height:380px;
+        background:$sub2imprantCardBg;
+    }
+    .managementrtTxtBox {
+        text-align: left;
+        position: absolute;
+        border:1px solid $white;
+        border-radius: 30px;
+        width:600px;
+        height:330px;
+        background-color:$white;
+        right:0px;
+        top:80px;
+        padding:70px 50px 0px 50px;
+        @include boxShadow2;
+        .manageSubTxt {
+            line-height:35px;
+            margin-top:21px;
+        }
+    }
+}

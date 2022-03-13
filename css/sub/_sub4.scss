@@ -1,0 +1,158 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 바로가이드란? ****************************************************************//
+//***************************************************************************************************************************************************************//
+$sub4advList01: url(/img/sub/sub4/sub4advList01.png) no-repeat center;
+$sub4advList02: url(/img/sub/sub4/sub4advList02.png) no-repeat center;
+$sub4advList03: url(/img/sub/sub4/sub4advList03.png) no-repeat center;
+$sub4advList04: url(/img/sub/sub4/sub4advList04.png) no-repeat center;
+$_sub4Mbg: url(/img/sub/sub4/sub4Mbg.jpg) no-repeat center;
+$sub4newbg: url(/img/sub/sub4/sub4newbg.png) no-repeat center;
+$sub4oldbg: url(/img/sub/sub4/sub4oldbg.png) no-repeat center;
+
+.sub4ListWrap {
+    @include contentsWrap;
+    margin-bottom:40px;
+    ul {
+        margin-top:50px;
+        font-size:0px;
+        li {
+            @include dpd;
+            margin-bottom:40px;
+            width:50%;
+            max-width:570px;
+            .sub4ListTail {
+                display: table;
+                width:100%;
+                min-height:170px;
+                .sub4ListTable-cell{
+                    display: table-cell;
+                    vertical-align: middle;
+                    height:100%;
+                    .sub4ListTxt {
+                        margin-top:12px;
+                        line-height:30px;
+                    }
+                }
+            }
+            .sub4ListHead{
+                .sub4Title{
+                    @include dpd;
+                    border-radius: 30px;
+                    border:1px solid $Pink01;
+                    padding:8px 29px;
+                }
+                .sub4Img {
+                    margin-top:20px;
+                    min-height:260px;
+                    &.__sub4advList01 {
+                        background:$sub4advList01;
+                    }
+                    &.__sub4advList02 {
+                        background:$sub4advList02;
+                    }
+                    &.__sub4advList03 {
+                        background:$sub4advList03;
+                    }
+                    &.__sub4advList04 {
+                        background:$sub4advList04;
+                    }
+                }
+            }
+        }
+    }
+}
+
+._sub4Mbg {
+    width:100%;
+    background:$_sub4Mbg;
+    background-size:cover;
+    margin:120px 0 150px 0px;
+    min-height:952px;
+    ._sub4MbgHead {
+        padding-top:100px;
+        &::before {
+            content: "";
+            display: block;
+            width:50px;
+            height:2px;
+            background-color:$Pink03;
+            margin:0 auto 27px;
+        }
+    }
+    ._sub4MbgHead2 {
+        margin-top:22px;
+        line-height:35px;
+    }
+    .sub4NumVisitWrap {
+        @include contentsWrap;
+        font-size: 0;
+        .sub4Ing {
+            max-width:370px;
+            margin:30px auto 0px;
+            ul {
+                font-size:0px;
+                &.lt {
+                    color:$Grey06;
+                }
+                &.rt {
+                    color:$Grey01;
+                }
+                li {
+                    font-size:18px;
+                    font-weight: 400;
+                    letter-spacing: -0.025em;
+                    margin-bottom:15px;
+                    @include dpd;
+                    &.arrowLi {
+                        width:5px;
+                        height:10px;
+                        display: inline-block;
+                        background:$sub2imArrow;
+                        margin:0 10px;
+                    }
+                }
+            }
+        }
+        .sub4NumBox {
+            margin-top:50px;
+            padding-top:60px;
+            min-height:528px;
+            .sub4ImgBox {
+                width:421px;
+                min-height:220px;
+                margin:50px auto 0px;
+                &.__NumBoxImg01 {
+                    background:$sub4oldbg;
+                    .mNumberTxt {
+                        padding-top:45px;
+                    }
+                    .NumberTxt {
+                        margin-top:16px;
+                    }
+                }
+                &.__NumBoxImg02 {
+                    background:$sub4newbg;
+                    .mNumberTxt {
+                        padding-top:45px;
+                    }
+                    .NumberTxt {
+                        margin-top:16px;
+                    }
+                }
+            }
+            &.sub4NumLeft {
+                width:50%;
+                @include dpd;
+                vertical-align: middle;
+            }
+            &.sub4NumRight {
+                width:50%;
+                background-color:rgba(255,255,255,0.7);
+                border-radius: 30px;
+                @include dpd;
+                vertical-align: middle;
+                
+            }
+        }
+    }
+}

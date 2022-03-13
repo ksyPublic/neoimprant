@@ -1,0 +1,304 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 필요성 및 관리 ****************************************************************//
+//***************************************************************************************************************************************************************//
+$sub5ListBox: url(/img/sub/sub5/sub5ListBox.png) no-repeat center;
+$RadiusC: url(/img/sub/sub5/RadiusC.png) no-repeat center;
+$__listItems01: url(/img/sub/sub5/__listItems01.png) no-repeat center;
+$__listItems02: url(/img/sub/sub5/__listItems02.png) no-repeat center;
+$__listItems03: url(/img/sub/sub5/__listItems03.png) no-repeat center;
+$__listItems04: url(/img/sub/sub5/__listItems04.png) no-repeat right -8px center;
+$_sub5Mbg: url(/img/sub/sub5/_sub5Mbg.jpg) no-repeat center center;
+$DiscriminoverBtn: url(/img/sub/sub5/DiscriminoverBtn.png) no-repeat center;
+$DiscriminBtn: url(/img/sub/sub5/DiscriminBtn.png) no-repeat center;
+$bdLiner: url(/img/sub/sub5/bdLiner.png) no-repeat center;
+$DiscriminListLt01: url(/img/sub/sub5/DiscriminListLt01.png) no-repeat center;
+$DiscriminListLt02: url(/img/sub/sub5/DiscriminListLt02.png) no-repeat center;
+$DiscriminListLt03: url(/img/sub/sub5/DiscriminListLt03.png) no-repeat center;
+$DiscriminListLt04: url(/img/sub/sub5/DiscriminListLt04.png) no-repeat center;
+$DiscriminListRt01: url(/img/sub/sub5/DiscriminListRt01.png) no-repeat center;
+$DiscriminListRt02: url(/img/sub/sub5/DiscriminListRt02.png) no-repeat center;
+$DiscriminListRt03: url(/img/sub/sub5/DiscriminListRt03.png) no-repeat center;
+$DiscriminListRt04: url(/img/sub/sub5/DiscriminListRt04.png) no-repeat center;
+
+
+._sub5Mbg {
+    width:100%;
+    background:$_sub5Mbg;
+    background-size:cover;
+    margin:112px 0 100px 0px;
+    min-height:913px;
+    .flex {
+        justify-content: center;
+        align-items: center;
+        li {
+            position: relative;
+
+            &.__rAfter {
+                &:after {
+                    content:"";
+                    width:20px;
+                    height:20px;
+                    background:$RadiusC;
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 50;
+                    right:-10px;
+                    top:calc(26% - 10px);
+                }
+            }
+            &.sradiusL {
+                &::before {
+                    content:"";
+                    position: absolute;
+                    left:-2px;
+                    top:26%;
+                    @include dpd;
+                    width:6px;
+                    height:6px;
+                    border-radius: 50%;
+                    background-color:$Pink01;
+                    z-index: 50;
+
+                }
+            }
+
+            &.sradiusR {
+                &::after {
+                    content:"";
+                    top:26%;
+                    position: absolute;
+                    right:-2px;
+                    @include dpd;
+                    width:6px;
+                    height:6px;
+                    border-radius: 50%;
+                    background-color:$Pink01;
+                    z-index: 50;
+                }
+            }
+        }
+    }
+    ._sub5MbgHead {
+        padding-top:100px;
+        &::before {
+            content: "";
+            display: block;
+            width:50px;
+            height:2px;
+            background-color:$Pink03;
+            margin:0 auto 27px;
+        }
+        
+    }
+    ._sub5MTail {
+        max-width:260px;
+        margin:0 auto;
+        border-radius: 10px;
+        border:1px solid #fac8e9;
+        background-color:$white;
+        margin-top:20px;
+        width:100%;
+        position: relative;
+        ._sub5Mtable {
+            display: table;
+            width:100%;
+            min-height:248px;
+        }
+        &::before {
+            content:"";
+            width:1px;
+            height:20px;
+            background-color:#fac8e9;
+            position: absolute;
+            top:-21px;
+            display: inline-block;
+        }
+        ._sub5MTitle {
+            padding:3px 10px;
+            background:$Pink01;
+            border-radius: 11px;
+            display: inline-block;
+        }
+
+        ._sub5MTitle2 {
+            margin-top:20px;
+        }
+
+        ._sub5MTitle3 {
+            margin-top:14px;
+            line-height:30px;
+        }
+        ._sub5MTail-table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            height:100%;
+        }
+        
+    }
+    ._sub5MbHead {
+        width:301px;
+        height:300px;
+        background:$sub5ListBox;
+        position: relative;
+        z-index: 2;
+        
+        
+        &._rotate {
+            transform: rotate(-180deg);
+        }
+        .sub5MbImg { 
+            overflow: hidden;
+            &.__listItems01 {
+                background:$__listItems01;
+                width:301px;
+                height:300px;
+            }
+            &.__listItems02 {
+                background:$__listItems02;
+                width:301px;
+                height:300px;
+                transform: rotate(-180deg);
+            }
+            &.__listItems03 {
+                background:$__listItems03;
+                width:301px;
+                height:300px;
+            }
+            &.__listItems04 {
+                background:$__listItems04;
+                width:301px;
+                height:300px;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+.descriptionWrap {
+    margin-bottom:112px;
+    .DesRollingWrap {
+        @include contentsWrap;
+        margin-top:50px;
+        .RollBox {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            .RollLeftBoxWrap {
+                width:470px;
+                .RollLeftBox {
+                    width:100%;
+                    height:360px;
+                    .ImgTitle {
+                        border-radius: 15px;
+                        background-color:rgba(255,255,255,0.7);
+                        margin:20px auto 0px;
+                        padding:5px;
+                        display: inline-block;
+                        width:100%;
+                        max-width:200px;
+                    }
+                    &.DiscriminListLt01 {
+                        background:$DiscriminListLt01;
+                    }
+                    &.DiscriminListLt02 {
+                        background:$DiscriminListLt02;
+                    }
+                    &.DiscriminListLt03 {
+                        background:$DiscriminListLt03;
+                    }
+                    &.DiscriminListLt04 {
+                        background:$DiscriminListLt04;
+                    }
+                }
+            }
+            .RollRightBoxWrap {
+                width:680px;
+                .RollRightBox {
+                    .ImgTitle {
+                        border-radius: 15px;
+                        background-color:rgba(216,61,150,0.6);
+                        margin:20px auto 0px;
+                        padding:5px;
+                        display: inline-block;
+                        width:100%;
+                        max-width:200px;
+                    }
+                    width:100%;
+                    height:360px;
+                    &.DiscriminListRt01 {
+                        background:$DiscriminListRt01;
+                    }
+                    &.DiscriminListRt02 {
+                        background:$DiscriminListRt02;
+                    }
+                    &.DiscriminListRt03 {
+                        background:$DiscriminListRt03;
+                    }
+                    &.DiscriminListRt04 {
+                        background:$DiscriminListRt04;
+                    }
+                }
+            }
+            
+            .RollLine {
+                margin:50px 24px 0px 25px;
+                width:1px;
+                height:478px;
+                background:$bdLiner;
+                background-size:100%;
+            }
+            
+        }
+        .RollingMTxt {
+            font-size:0px;
+            span {
+                &.RollingSpan01 {
+                    @include dpd;
+                    border-radius: 20px;
+                    background-color:$Pink01;
+                    padding:9px 19px;
+                    vertical-align: middle;
+                }
+                &.RollingSpan02 {
+                    margin-left:11px;
+                    @include dpd;
+                    vertical-align: middle;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+.DesPrevBtn {
+    top:0px;
+    position: absolute;
+    left:33%;
+    @include dpd;
+    width:40px;
+    height:40px;
+    background:$DiscriminBtn;
+    z-index: 51;
+    cursor: pointer;
+    &:hover{
+        background:$DiscriminoverBtn;
+        transform: rotate(-180deg);
+    }
+}
+.DesNextBtn {
+    top:0px;
+    right:33%;
+    position: absolute;
+    @include dpd;
+    width:40px;
+    height:40px;
+    background:$DiscriminBtn;
+    transform: rotate(-180deg);
+    z-index: 51;
+    cursor: pointer;
+    &:hover{
+        background:$DiscriminoverBtn;
+        transform: rotate(0deg);
+    }
+}

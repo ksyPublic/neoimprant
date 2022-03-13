@@ -1,0 +1,181 @@
+//color 
+$white :#fff;
+$Grey01 : #333;
+$Grey02 : #545454;
+$Grey03 : #f3f3f3;
+$Grey04 : #888;
+$Grey05 : #ccc;
+$Grey06 : #666;
+$Black01 : #000;
+$Black02 : #222;
+$Black03 : #272727;
+$Pink01 : #d83d96;
+$Pink02 : #fcd6ed;
+$Pink03 : #a73275;
+$border01 : #b0b0b2;
+$border02 : #ddd;
+$border03 : #aaa;
+ // {
+
+.ftWhite {
+    color:#fff;
+}
+
+.ftGrey01 {
+    color:#333;
+}
+
+.ftGrey06 {
+    color:#666;
+}
+
+.ftGrey04 {
+    color:#888;
+}
+
+.ftGrey09 {
+    color:#999;
+}
+
+.ftPink01 {
+    color:#d83d96;
+}
+    
+//header
+$headColor : rgba(0,0,0,0.25);
+
+//footer }
+
+//layout {
+    @mixin dpd {
+        display: inline-block;
+    }
+    @mixin transition {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    @mixin contentsWrap {
+        max-width:1200px;
+        margin:0 auto;
+        position: relative;
+    }
+    @mixin textShadow {
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    }
+    @mixin boxShadow {
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    @mixin boxShadow2 {
+        box-shadow: 5px 9px 19px 1px rgba(0, 0, 0, 0.75);
+    }
+
+    @for $i from 1 through 80 {
+        .ft#{$i} { font-size: 1 * $i + px; } 
+    }
+
+    @for $i from 1 through 60 {
+        .let#{$i} { letter-spacing: -0.001 * $i + em; } 
+    } 
+
+    @for $i from 1 through 60 {
+        .mgt#{$i} { margin-top: 1 * $i + px; }
+        .mgl#{$i} { margin-left: 1 * $i + px; }
+        .mgr#{$i} { margin-right: 1 * $i + px; }
+        .lig#{$i} { line-height: 1 * $i + px; }
+    } 
+
+    .ftw300 {
+        font-weight: 300;
+    }
+
+    .ftw400 {
+        font-weight: 400;
+    }
+
+    .ftw500 {
+        font-weight: 500;
+    }
+
+    .ftwBold {
+        font-weight: bold;
+    }
+
+    .ftcenter {
+        text-align: center;
+    }
+
+    .ftleft {
+        text-align: left;
+    }
+
+    .ftright {
+        text-align: right;
+    }
+
+    .flt {
+        float:left;
+    }
+
+    .frt {
+        float:right;
+    }
+
+    .after {
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+
+    .whitePace {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+//animation header none block
+// @mixin animation-mixin($name, $from, $to) {
+//     @keyframes #{$name} {
+//       0% {transform: translate3d($from, 0, 0); opacity: 0;}
+//       100% {transform: translate3d($to, 0, 0); opacity: 1;}
+//     }
+//   }
+  
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+          to { opacity: 1; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }   
+
+    @-webkit-keyframes fadeOut {
+        from { opacity: 0; }
+          to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }   
+
+    @keyframes scrolldown{
+        0% {transform:translate(0, 0);}
+        100% {transform:translate(0, 5px);}
+    }
+  
+    
+//}

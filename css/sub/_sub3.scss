@@ -1,0 +1,186 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 임플란트 상식 ****************************************************************//
+//***************************************************************************************************************************************************************//
+$sub3ibt01: url(/img/sub/sub3/sub3ibt01.png) no-repeat center;
+$sub3ibt02: url(/img/sub/sub3/sub3ibt02.png) no-repeat center;
+$sub3ibt03: url(/img/sub/sub3/sub3ibt03.png) no-repeat center;
+$sub3Mbg: url(/img/sub/sub3/sub3Mbg.png) no-repeat center;
+$sub3List01: url(/img/sub/sub3/sub3List01.png) no-repeat center;
+$sub3List02: url(/img/sub/sub3/sub3List02.png) no-repeat center;
+$sub3List03: url(/img/sub/sub3/sub3List03.png) no-repeat center;
+$_sub3Mbg: url(/img/sub/sub3/_sub3Mbg.jpg) no-repeat center;
+
+.sub3MbgWrap {
+    @include contentsWrap;
+    margin-top:42px;
+    .sub3Mbg{
+        margin:0 auto;
+        width:715px;
+        height:335px;
+        background:$sub3Mbg;
+    }
+    .sub3ListWrap {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:-30px;
+            margin-top:75px;
+            li {
+                &.sub3ano {
+                    background-color:#f3f6ff;
+                    border:1px solid transparent;
+                }
+                padding:60px 0px 52px 0px;
+                width:33.33%;
+                max-width:378px;
+                min-height:468px;
+                border-radius: 30px;
+                border:1px dashed $Grey05;
+                margin-left:30px;
+                .sub3Head {
+                    .sub3Img {
+                        width:188px;
+                        height:140px;
+                        margin:50px auto 0px;
+                        &.sub3listBg01 {
+                            background:$sub3List01;
+                        }
+                        &.sub3listBg02 {
+                            background:$sub3List02;
+                        }
+                        &.sub3listBg03 {
+                            background:$sub3List03;
+                        }
+                    }
+                }
+                .sub3Tail {
+                    margin-top:22px;
+                    line-height:30px;
+                }
+            }
+        }
+    }
+    
+    .listM {
+        width:100%;
+        position: absolute;
+        top:0;
+       
+        .listM01 {
+            position: relative;
+            padding-right: 50%;
+            padding-left: 16%;
+            top:90px;
+        }
+
+        .listM02 {
+            position: relative;
+            padding-right: 8%;
+            padding-left: 50%;
+            top:140px;
+        }
+
+        .listM03 {
+            position: relative;
+            padding-left: 8%;
+            padding-right: 50%;
+            top: 225px;
+        }
+        .sub3Mbg_linerAfter {
+            width:100%;
+            height:1px;
+            background:$Grey01;
+            margin:10px 0px;
+            display: inline-block;
+            position: relative;
+            &:after {
+                content:"";
+                position: absolute;
+                top:-3px;
+                right:-5px;
+                display: block;
+                width:9px;
+                height:9px;
+                border-radius: 50%;
+                background:$Grey01;
+            }
+        }
+        .sub3Mbg_linerBefore {
+            width:100%;
+            height:1px;
+            background:$Grey01;
+            margin:10px 0px;
+            display: inline-block;
+            position: relative;
+            &:before {
+                content:"";
+                position: absolute;
+                top:-3px;
+                left:-5px;
+                display: block;
+                width:9px;
+                height:9px;
+                border-radius: 50%;
+                background:$Grey01;
+            }
+            
+        }
+    }
+}
+._sub3Mbg {
+    width:100%;
+    background:$_sub3Mbg;
+    background-size:cover;
+    margin:120px 0 150px 0px;
+    min-height:1282px;
+    ._sub3MbgHead {
+        padding-top:100px;
+        &::before {
+            content: "";
+            display: block;
+            width:50px;
+            height:2px;
+            background-color:$Pink03;
+            margin:0 auto 27px;
+        }
+    }
+    .sub3MbgIbtWrap {
+        @include contentsWrap;
+        margin-top:50px;
+        .ItemsBox {
+            width:100%;
+            max-width:900px;
+            background-color:$white;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            font-size: 0;
+            .ItemsBoxLeft {
+                &._sub3ibt01 {
+                    background:$sub3ibt01; 
+                }
+                &._sub3ibt02 {
+                    background:$sub3ibt02; 
+                }
+                &._sub3ibt03 {
+                    background:$sub3ibt03; 
+                }
+                width:100%;
+                max-width: 420px;
+                min-height:280px;
+                vertical-align: middle;
+                @include dpd;
+            }
+            .ItemsBoxRight {
+                vertical-align: middle;
+                width:100%;
+                max-width:480px;
+                @include dpd;
+                .ItemsSubTxt {
+                    margin-top:22px;
+                    line-height:30px;
+                }
+            }
+        }
+    }
+}

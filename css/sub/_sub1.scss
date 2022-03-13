@@ -1,0 +1,407 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 임플란트란? ****************************************************************//
+//***************************************************************************************************************************************************************//
+$item01: url(/img/sub/sub1/sub1_list01.jpg) no-repeat center;
+$item02: url(/img/sub/sub1/sub1_list02.jpg) no-repeat center;
+$item03: url(/img/sub/sub1/sub1_list03.jpg) no-repeat center;
+$_sub1Mbg: url(/img/sub/sub1/_sub1MBg.jpg) no-repeat center;
+$_hdImg: url(/img/sub/sub1/_hdImg.png) no-repeat center;
+$itemsListBG: url(/img/sub/sub1/itemsListBG.png) no-repeat center;
+$radiusFL: url(/img/sub/sub1/radiusFL.png) no-repeat center;
+$CirIcon1: url(/img/sub/sub1/raIcon01.png) no-repeat center;
+$CirIcon2: url(/img/sub/sub1/raIcon02.png) no-repeat center;
+$CirIcon3: url(/img/sub/sub1/raIcon03.png) no-repeat center;
+$qaIcon: url(/img/sub/sub1/qaIcon.png) no-repeat center;
+$qaArrow: url(/img/sub/sub1/qaArrow.png) no-repeat center;
+$sub1bgLast: url(/img/sub/sub1/sub1bgLast.jpg) no-repeat center;
+
+._sub1ListWrap {
+    margin:43px 0 120px 0px;
+    ul._sub1ListUl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left:-31px;
+        li._sub1ListBox {
+            width:33.33%;
+            height:100%;
+            max-width:380px;
+            margin-left:31px;
+            ._sub1ListHead {
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                border-top:1px solid $white;
+                height:369px;
+                &.item01 {
+                    background:$item01;
+                }
+                &.item02 {
+                    background:$item02;
+                }
+                &.item03 {
+                    background:$item03;
+                }
+            }
+            ._sub1ListTail {
+                border:1px solid $border02;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                ._inlineBoxWrap {
+                    display: table;
+                    width:100%;
+                    height:100%;
+                    ._subListMTxt {
+                        font-size:0px;
+                        display: table-cell;
+                        vertical-align: middle;
+                        height:179px;
+                        max-height:100%;
+                        span {
+                            margin-right:10px;
+                            padding:5px 11px;
+                            border-radius: 11px;
+                            @include dpd;
+                            vertical-align: middle;
+                            &._ListIc {
+                                background-color:$Pink01;
+                                color:$white;
+                            }
+                        }
+                        div {
+                            &._Listmt {
+                                @include dpd;
+                                vertical-align: middle;
+                            }
+                            &._Listbt {
+                                line-height:30px;
+                                @include dpd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+._sub1Mbg {
+    width:100%;
+    height:705px;
+    background:$_sub1Mbg;
+    background-size:cover;
+    ._sub1MbgTail {
+        margin-top:56px; 
+        ul {
+            margin-left:2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                position: relative;
+                display: table;
+                height:322px;
+                width:322px;
+                background-color:rgba(255,255,255,0.5);
+                border:1.5px dashed $white;
+                border-radius: 50%;
+                margin-left:-2px;
+                ._CirTail {
+                    display: table-cell;
+                    position: relative;
+                    z-index: 99;
+                    vertical-align: middle;
+                    height:inherit;
+                    ._CirItemBox {
+                        width:69px;
+                        height:70px;
+                        margin:0 auto;
+                        &.CirIcon1 {
+                            background:$CirIcon1;
+                        }
+                        &.CirIcon2 {
+                            background:$CirIcon2;
+                        }
+                        &.CirIcon3 {
+                            background:$CirIcon3;
+                        }
+                    }
+                    .cirTxt {
+                        line-height:25px;
+                    }
+                   
+                }
+                &.radiusF {
+                    &::before {
+                        content:"";
+                        width:117px;
+                        height:322px;
+                        position: absolute;
+                        @include dpd;
+                        left:-117px;
+                        background:$radiusFL;
+                    }
+                }
+                &.radiusL {
+                    &::after {
+                        content:"";
+                        width:117px;
+                        height:322px;
+                        position: absolute;
+                        @include dpd;
+                        right:-117px;
+                        background:$radiusFL;
+                        transform: rotate(-180deg);
+                    }
+                }
+                span {
+                    &.Ztra {
+                        &.lradiusL {
+                            &::before {
+                                content:"";
+                                position: absolute;
+                                left:-9px;
+                                top:-14px;
+                                @include dpd;
+                                width:20px;
+                                height:20px;
+                                border-radius: 50%;
+                                background-color:rgba(216,61,150,0.3);
+                            }
+                        }
+                        &.lradiusR {
+                            &::after {
+                                content:"";
+                                position: absolute;
+                                right:-9px;
+                                top:-14px;
+                                @include dpd;
+                                width:20px;
+                                height:20px;
+                                border-radius: 50%;
+                                background-color:rgba(216,61,150,0.3);
+                            }
+                        }
+                    }
+                    &.lradiusL {
+                        &::before {
+                            content:"";
+                            position: absolute;
+                            left:-3px;
+                            top:-8px;
+                            @include dpd;
+                            width:8px;
+                            height:8px;
+                            border-radius: 50%;
+                            background-color:$Pink01;
+                        }
+                    }
+                    &.lradiusR {
+                        &::after {
+                            content:"";
+                            position: absolute;
+                            right:-3px;
+                            top:-8px;
+                            @include dpd;
+                            width:8px;
+                            height:8px;
+                            border-radius: 50%;
+                            background-color:$Pink01;
+                        }
+                    }
+                    &.sradiusL {
+                        &::before {
+                            content:"";
+                            position: absolute;
+                            left:-2px;
+                            @include dpd;
+                            width:6px;
+                            height:6px;
+                            border-radius: 50%;
+                            background-color:$Pink01;
+                        }
+                    }
+                    &.sradiusR {
+                        &::before {
+                            content:"";
+                            position: absolute;
+                            right:-2px;
+                            @include dpd;
+                            width:6px;
+                            height:6px;
+                            border-radius: 50%;
+                            background-color:$Pink01;
+                        }
+                    }
+                    &.Ztr {
+                        position: absolute;
+                        left:-1px;
+                        top:-2px;
+                        z-index: 90;
+                        @include dpd;
+                        width:322px;
+                        height:161px;
+                        background:$itemsListBG;
+                        transform: rotate(-180deg);
+                    }
+                    &.Ctr {
+                        position: absolute;
+                        left:-1px;
+                        bottom:-1px;
+                        z-index: 90;
+                        @include dpd;
+                        width:322px;
+                        height:161px;
+                        background:$itemsListBG;
+                        background:$itemsListBG;
+                    }
+                }
+            }
+        }
+    }
+    ._sub1MbgHead {
+        padding-top:100px;
+        &::before {
+            content: "";
+            display: block;
+            width:50px;
+            height:2px;
+            background-color:$Pink03;
+            margin:0 auto 27px;
+        }
+        span {
+            &._hdImg {
+                @include dpd;
+                width:220px;
+                height:77px;
+                background:$_hdImg;
+                vertical-align: middle;
+                margin-left:11px;
+            }
+        }
+    }
+}
+
+.sub1MTxtWrap {
+    padding:80px 0 120px 0px;
+    .sub1MBox {
+        @include contentsWrap;
+        .sub1WBox {
+            font-size: 0;
+            .BoxWrap {
+                &.pdr40 {
+                    padding-right:40px;
+                }
+                &.pdl40 {
+                    padding-left:40px;
+                }
+                width:50%;
+                @include dpd;
+                text-align: left;
+                h1 {
+                    line-height:40px;
+                }
+                .ftbasic {
+                    @include dpd;
+                    line-height:35px;
+                    .unftBasic {
+                        border-bottom : 1px solid #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.imprantWrap {
+    margin-bottom:150px;
+    .imprantTabWrap {
+        margin-top:36px;
+        .imprantTab {
+            @include contentsWrap;
+            .imprantBox {
+                text-align: left;
+                border-bottom:1px solid #999;
+                .imprantTable {
+                    .imprantTxtWrap {
+                        @include dpd;
+                        width:88%;
+                        vertical-align: middle;
+                        line-height:28px
+                    }
+                    display: table;
+                    height:100%;
+                    width:100%;
+                    cursor: pointer;
+
+                    &:first-child {
+                        border-top:1px solid $Pink01;
+                    }
+
+                    &:not(:first-child) {
+                        border-top:1px solid $border02;
+                    }
+
+                    &:last-child {
+                        border-bottom:1px solid #999;
+                    }
+                  
+                    .imprantTable-cell {
+                        display: table-cell;
+                        vertical-align: middle;
+                        height:100px;
+                        overflow:hidden;
+                        .qaIcon {
+                            background:$qaIcon;
+                            width:25px;
+                            height:100%;
+                            @include dpd;
+                            vertical-align: middle;
+                            margin:0 20px;
+                        }
+                        .arrowUp {
+                            position: relative;
+                            transition: all 0.2s ease;
+                            transform: rotate(-180deg);
+                            @include dpd;
+                            background:$qaArrow;
+                            margin-right:20px;
+                            width:15px;
+                            height:100%;
+                            float:right;
+                        }
+                    }
+                }
+                .imprantTable2 {
+                    display: table;
+                    height:100%;
+                    width:100%;
+                    background-color:#f7f7f7;
+                    .imprantTable-cell {
+                        padding:36px 70px;
+                        line-height:35px;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub1BgLastWrap {
+    width:100%;
+    background:$sub1bgLast;
+    background-size:cover;
+    height:80px;
+    display: table;
+    .sub1Last {
+        display: table-cell;
+        vertical-align: middle;
+        height:100%;
+        span {
+            &.int {
+                font-style: italic;
+            }
+        }
+    }
+}

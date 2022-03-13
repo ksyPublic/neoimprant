@@ -1,0 +1,202 @@
+//***************************************************************************************************************************************************************//
+//****************************************************************page_style.scss정의 언론보도 ****************************************************************//
+//***************************************************************************************************************************************************************//
+$sub8Bg:  url(/img/sub/sub8/sub8Bg.jpg) no-repeat center center;
+$sub8BgCenter:  url(/img/sub/sub8/sub8BgCenter.png) no-repeat center center;
+.sub8JibuWrap {
+    width:100%;
+    background:$sub8Bg;
+    background-size:cover;
+    min-height:800px;
+    margin-top:72px;
+    position: relative;
+    .sub8JibuBox {
+        min-height:800px;
+        position: absolute;
+        left:0;
+        right:0;
+        margin:0 auto;
+        background:$sub8BgCenter;
+        font-size:0;
+        .sub8Box {
+            @include dpd;
+            vertical-align: top;
+            width:50%;
+            .listJibu {
+                text-align: right;
+                ul {
+                    &.offsetAbsolute01 {
+                        margin-top:86px;
+                        margin-right:230px;
+                    }
+                    &.offsetAbsolute02 {
+                        margin-top:72px;
+                        margin-right:258px;
+                    }
+                    &.offsetAbsolute03 {
+                        margin-top:58px;
+                        margin-right:236px;
+                    }
+                    &.offsetAbsolute04 { 
+                        margin-top:80px;
+                        margin-right:325px;
+
+                    }
+                    &.offsetAbsolute05 {
+                        margin-top:43px;
+                        margin-right:265px;
+
+                    }
+                    &.offsetAbsolute06 {
+                        margin-top:80px;
+                        margin-right:305px;
+                    }
+                    &.offsetAbsolute07 {
+                        margin-top:88px;
+                        margin-right:285px;
+                    }
+                    &.offsetAbsolute08 {
+                        margin-top:140px;
+                        margin-left:185px;
+                    }
+                    &.offsetAbsolute09 {
+                        margin-top:183px;
+                        margin-left:248px;
+                    }
+                    &.offsetAbsolute10 {
+                        margin-top:63px;
+                        margin-left:311px;
+                    }
+                    &.offsetAbsolute11 {
+                        margin-top:75px;
+                        margin-left:255px;
+                    }
+                    &.offsetAbsolute12 {
+                        margin-top:26px;
+                        margin-left:230px;
+                    }
+                    &.offsetAbsolute13 {
+                        margin-top:133px;
+                        margin-left:-55px;
+                    }
+                    li {
+                        font-size:18px;
+                        font-weight: 500;
+                        letter-spacing: -0.025em;
+                        color:$Grey01;
+                        @include dpd;
+                        margin-left:20px;
+                        &:before {
+                            content:"";
+                            @include dpd;
+                            position: relative;
+                            vertical-align: middle;
+                            top:-1px;
+                            width:5px;
+                            height:5px;
+                            background:$Pink01;
+                            margin-right:10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.TabWrap {
+    margin-top:120px;
+    .TabWrapListBox {
+        @include contentsWrap;
+      
+        ul {
+            font-size:0;
+            li {
+                border:1px solid $border02;
+                border-right:none;
+                &:first-child {
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    a {
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                    }
+                }
+
+                &:last-child {
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    border-right:1px solid $border02;
+                    a {
+                        border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                    }
+                }
+                @include dpd;
+                height:100%;
+                width:calc(24% - 48px);
+                a {
+                    cursor: pointer;
+                    display: block;
+                    line-height:60px;
+                    position: relative;
+                    margin:0 auto;
+                    vertical-align: middle;
+                    height:60px;
+                    color:#888;
+                    font-size:18px;
+                    letter-spacing: -0.025em;
+                    font-weight: 400;
+                    text-align: center;
+                    &.activeTab {
+                        color:$white;
+                        background-color:#a73275;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.galleryWrap {
+    margin:80px 0 0px 0px;
+    padding-bottom:20px;
+    .gelleryContents {
+        display: none;
+        border-top:1px solid $Black01;
+        border-bottom:1px solid #999;
+        @include contentsWrap;
+        .gelleryBox{
+            border-bottom:1px solid $border02;
+            &:last-child {
+                border-bottom:none;
+            }
+            font-size:0px;
+            .gelLeftBox {
+                @include dpd;
+                width:100%;
+                max-width:895px;
+                padding:60px 20px 54px 0px;
+                margin-left:20px;
+                vertical-align: middle;
+            }
+            .gelRightBox {
+                padding-top:30px;
+                @include dpd;
+                width:100%;
+                max-width:265px;
+                min-height:140px;
+                border-radius: 30px;
+                margin-right:20px;
+                background-color:#f4f4f4;
+                vertical-align: middle;
+                > div {
+                    span {
+                        margin-right:20px;
+                    }
+                }
+            }
+        }
+    }
+}
